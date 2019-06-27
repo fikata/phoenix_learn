@@ -35,3 +35,5 @@ config :rsvp, Rsvp.Repo,
   password: "postgres"
 
 config :rsvp, ecto_repos: [Rsvp.Repo]
+
+import_config "#{Mix.env}.exs"

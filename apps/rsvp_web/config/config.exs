@@ -12,7 +12,8 @@ config :rsvp_web, RsvpWebWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "fKjrWxU3xOiZhL4QP1oh02S8x9wREoFiok7831sLZ/l/ctVMccXy21iVHVAh0FWk",
   render_errors: [view: RsvpWebWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: RsvpWeb.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: RsvpWeb.PubSub, adapter: Phoenix.PubSub.PG2],
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Configures Elixir's Logger
 config :logger, :console,
