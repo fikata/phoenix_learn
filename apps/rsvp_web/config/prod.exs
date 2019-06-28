@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :rsvp_web, RsvpWebWeb.Endpoint,
-  url: [host: "desolate-sea-52952.herokuapp.com", port: 80],
+  load_from_system_env: true,
+  url: [scheme: "https", host: "desolate-sea-52952.herokuapp.com", port: 80],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
